@@ -1,0 +1,15 @@
+.formErrors {
+  text-align: center;
+  color: #ff1111;
+  background-color: rgba(255, 17, 17, 0.08);
+  padding: 10px;
+  margin: 5px 10px 10px;
+}
+
+.formErrors:empty {
+  display: none;
+}
+
+.checkbox {
+  float: left;
+}

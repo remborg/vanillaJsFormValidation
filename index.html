@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vanilla JS form validation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="form.js" defer></script>
+</head>
+
+<body>
+    <main class="main" id="main">
+        <h2>
+            Form validation example
+        </h2>
+        <form action="." method="POST" id="form" onsubmit="formValidator.sendForm(event)">
+            <div class="formErrors" id="formErrors"></div>
+            <div class="formInput">
+                <label class="labelInput" for="firstname">First Name*</label>
+                <input type="text" id="firstname" onblur="formValidator.onInputBlur('firstname')"
+                    oninput="formValidator.onInputChange('firstname')">
+            </div>
+            <div class="formInput">
+                <label class="labelInput" for="lastname">Last Name*</label>
+                <input type="text" id="lastname" onblur="formValidator.onInputBlur('lastname')"
+                    oninput="formValidator.onInputChange('lastname')">
+            </div>
+            <div class="formInput">
+                <label class="labelInput" for="email">Email Address*</label>
+                <input type="email" id="email" onblur="formValidator.onInputBlur('email')"
+                    oninput="formValidator.onInputChange('email')">
+            </div>
+            <div class="formInput">
+                <input type="checkbox" class="checkbox" id="terms"
+                    onclick="formValidator.onInputChange('terms'); formValidator.onInputBlur('terms')">
+                <label class="labelInput">Please click the box to confirm you've read and understand
+                    the <u>terms & conditions</u>.*
+                </label>
+            </div>
+            <button id="submitButton" class="submitButton" disabled>ENTER</button>
+        </form>
+    </main>
+</body>
+
+</html>
